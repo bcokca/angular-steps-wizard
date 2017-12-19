@@ -25,6 +25,10 @@ export class WizardStepComponent implements OnInit {
     this.wizard.next(this);
   }
 
+  edit() {
+    this.wizard.edit(this);
+  }
+
   finish() {
     console.log('finished');
   }

@@ -19,6 +19,8 @@ export class WizardComponent implements OnInit, AfterContentInit {
   @ContentChildren(WizardStepComponent) wizardSteps: QueryList<WizardStepComponent>;
   private steps: any[];
 
+  private currentActiveStep: WizardStepComponent;
+
   constructor(private cdr: ChangeDetectorRef) {
   }
 
@@ -36,6 +38,7 @@ export class WizardComponent implements OnInit, AfterContentInit {
     if (this.steps.length > 0) {
       this.steps[0].isActive = true;
       this.steps[0].isDirty = true;
+      this.currentActiveStep = this.steps[0];
       this.steps[this.steps.length - 1].isLastElement = true;
     }
     // this.cdr.detectChanges();
@@ -45,7 +48,14 @@ export class WizardComponent implements OnInit, AfterContentInit {
     const index = this.steps.indexOf(elem);
     elem.isActive = false;
     this.steps[index + 1].isActive = true;
+    this.currentActiveStep = this.steps[index + 1];
     this.steps[index + 1].isDirty = true;
+  }
+
+  edit(elem) {
+    this.currentActiveStep.isActive = false;
+    elem.isActive = true;
+    this.currentActiveStep = elem;
   }
 
   getIndex(elem: WizardStepComponent) {
