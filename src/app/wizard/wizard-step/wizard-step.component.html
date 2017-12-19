@@ -1,0 +1,20 @@
+<div class="steps">
+  <div class="steps-title">
+    <div class="steps-title-number"><h4>{{getIndex() + 1}}.</h4></div>
+    <div class="steps-title-text"><h4>{{title}}</h4></div>
+  </div>
+
+  <div class="steps-content" [hidden]="!isActive">
+    <ng-content></ng-content>
+  </div>
+
+  <div class="steps-content" [hidden]="isActive || !isDirty">
+    <ng-content select=".preview"></ng-content>
+  </div>
+
+  <div class="steps-footer" [hidden]="!isActive">
+    <button class="btn btn-secondary" (click)="next()" [hidden]="isLastElement">Continue</button>
+    <button class="btn btn-secondary" (click)="finish()" [hidden]="!isLastElement">Finish</button>
+  </div>
+
+</div>

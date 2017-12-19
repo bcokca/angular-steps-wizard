@@ -1,0 +1,23 @@
+.steps{
+  border-bottom: 1px solid #D9D9E0;
+  padding: 15px 10px 0 10px;
+}
+
+.steps .steps-title .steps-title-number{
+  width: 50px;
+  float: left;
+}
+
+.steps .steps-content{
+  margin-left: 50px;
+  /*height: 200px;*/
+}
+
+.steps .steps-footer{
+  background-color: #f2f2f2;
+  padding: 10px 0;
+}
+
+.steps .steps-footer button{
+  margin-left: 50px;
+}
