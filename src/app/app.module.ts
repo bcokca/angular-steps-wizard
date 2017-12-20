@@ -1,24 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
+import {AppComponent} from './app.component';
 
-import { AppComponent } from './app.component';
-import { WizardComponent } from './wizard/wizard.component';
-import { WizardStepComponent } from './wizard/wizard-step/wizard-step.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {WizardModule} from './wizard/index';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    WizardComponent,
-    WizardStepComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    WizardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
