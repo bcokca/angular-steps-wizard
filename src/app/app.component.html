@@ -1,19 +1,23 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
   <div class="row">
-    <app-wizard class="col-md-12">
+    <bc-wizard class="col-md-12" style="margin-top: 20px;" [finishButtonText]="'Buy'">
 
-      <app-wizard-step [title]="'Select Data'">
+      <bc-wizard-step [title]="'Login'">
         <p>first element</p>
         <div class="preview">my preview class select data</div>
-      </app-wizard-step>
+      </bc-wizard-step>
 
-      <app-wizard-step [title]="'Select Parameter'">
+      <bc-wizard-step [title]="'Choose'">
         <p>second element</p>
         <div class="preview">my preview class select data</div>
-      </app-wizard-step>
+      </bc-wizard-step>
 
-    </app-wizard>
+      <bc-wizard-step [title]="'Checkout'">
+        <p>Payment options</p>
+      </bc-wizard-step>
+
+    </bc-wizard>
   </div>
 </div>
 

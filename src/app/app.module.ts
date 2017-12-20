@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { WizardComponent } from './wizard/wizard.component';
 import { WizardStepComponent } from './wizard/wizard-step/wizard-step.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { WizardStepComponent } from './wizard/wizard-step/wizard-step.component'
     WizardStepComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
